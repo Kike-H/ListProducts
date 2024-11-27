@@ -170,8 +170,8 @@ struct Refinement: Codable {
     let count: Int?
     let label, refinementID: String?
     let selected: Bool?
-    let type: TypeEnum?
-    let searchName: SearchName?
+    let type: String?
+    let searchName: String?
     let high, low, colorHex: String?
 
     enum CodingKeys: String, CodingKey {
