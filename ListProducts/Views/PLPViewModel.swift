@@ -31,7 +31,7 @@ final class PLPViewModel: BaseViewModel {
                     weak.products.append(contentsOf: result.plpResults?.records ?? [])
                 }
             case .failure(let error):
-                weak.products = []
+                weak.products = weak.products
                 let msg = weak.getAFError(error: error)
                 debugPrint(msg)
             }
