@@ -38,7 +38,7 @@ final class PLPViewModel: BaseViewModel {
         }
         self.isFetching = true
         self.isLoading = true
-        API.getProducts(txtSearch: self.txtSearch, page: self.page, sort: sort).execute(completion: completion)
+        API.getProducts(txtSearch: self.txtSearch.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? self.txtSearch, page: self.page, sort: sort).execute(completion: completion)
     }
     
     func searchProducts() {

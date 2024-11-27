@@ -31,7 +31,7 @@ struct CustomTextField: View {
             Spacer()
             Rectangle()
                 .fill(.blue)
-                .cornerRadius(cornerRadius, corners: .bottomRight)
+                .cornerRadius(cornerRadius, corners: [.bottomRight, .topRight])
                 .frame(width: 60.0, height: 50.0)
                 .overlay(
                     HStack {
@@ -40,7 +40,6 @@ struct CustomTextField: View {
                                 .foregroundStyle(.white)
                                 .padding(.horizontal, padding)
                         }
-                        .cornerRadius(cornerRadius, corners: .bottomRight)
                     }
                 )
             
